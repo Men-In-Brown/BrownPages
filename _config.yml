@@ -1,9 +1,9 @@
-title: Nighthawk-Pages
-description: "August 2023 to June 2024"
-owner_name: Tirth Thakkar
-github_username: Tirth-Thakkar
-github_repo: "Nighthawk-Pages"
-baseurl: "/Nighthawk-Pages"
+title: Linkr
+description: "Find ideas fast"
+owner_name: Varaprasad Venkata Nibhanupudi
+github_username: nVarap
+github_repo: "BrownPages"
+baseurl: "/BrownPages"
 remote_theme: jekyll/minima
 minima:
   social_links:

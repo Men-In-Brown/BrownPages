@@ -14,13 +14,13 @@ permalink: /natm-retro
 
 Although we had good code and a better presentation, we wanted to take the opportunity of N@TM to collect data from random people. We wanted to use this data for finding out what's good about our appication, what could be better, and overall how to proceed. Here's a screenshot of the screen we used to collect data (through our Google form):
 
-![img1](images/Screenshot%20(100).png)
+<img src="{{ site.baseurl }}/images/Screenshot%20(100).png">
 
 ### Putting Feedback To Use
 
 Below is an image showing all the responses to the data we requested from the participants and audience:
 
-![img2](images/Linkr%20Responses.png)
+<img src="{{ site.baseurl }}/images/Linkr%20Responses.png">
 
 From these responses, we will add many things to our application. Our to-do list (from the responses solely) now looks like this:
 
@@ -36,17 +36,17 @@ From these responses, we will add many things to our application. Our to-do list
 
 We as high schoolers constantly have great ideas, and sometimes we make something out of them, but a consistent problem with our ideas is that they never go anywhere because they don't get noticed by a lot of people. Our team wanted to solve this problem. Enter: Linkr. We take the swipe-heavy mechanic from popular applications like Tindr, TikTok, Instagram Reels, etc. and the countless company ideas from sites such as LinkedIn and created a website where users can swipe through company startup ideas until the find one that they'd either like to invest in or get employeed in. 
 
-![img3](images/Screenshot%20(105).png)
+<img src="{{ site.baseurl }}/images/Screenshot%20(105).png">
 
 We shall skip the login and signup process, because it's a pretty basic and standard feature that every website here has. What we'd like to do instead is show you the heart of our website: the Company Findr. Here is where you'll be able to scroll through the countless company startup ideas that users have created.
 
-![img4](images/Screenshot%20(107).png)
+<img src="{{ site.baseurl }}/images/Screenshot%20(107).png">
 
 The website is pulling data from a database with thousands of company ideas. We made the database ourselves using Java Spring, and the frontend is HTML/CSS/JS. 
 
 When you've swiped enough, you'll probably come across a company that you'll want to either invest or get employeed in. This is where you'll either swipe left or right. Let me swipe left for you to indicate to the side that you'd like to invest in this company.
 
-![img5](images/Screenshot%20(106).png)
+<img src="{{ site.baseurl }}/images/Screenshot%20(106).png">
 
 I just want to quickly add here that this is a feature that I've never tried before, but that I'm glad I did for this project. What's happening here is that when you swipe, the name and mission of the company (the fields display on the previous screen) are stored in local data. On the new page, the local data is then pulled and displayed on the current page. So technically, the data from the backend is moving through pages of the website. It's a subtle addition to our website, but a valuable one. 
 
@@ -54,7 +54,7 @@ When you find a company you want to invest, it shows the screen above. Later, we
 
 For the more technical audience, we'd like to show you our backend. 
 
-![img6](images/Screenshot%20(108).png)
+<img src="{{ site.baseurl }}/images/Screenshot%20(108).png">
 
 Above, you'll see the backend admin panel. It uses Thymeleaf to grab the same login data from the backend, except now it is all one repository. This allows for a more integrated experience, which can be applied to admin panels as you see here. In this admin panel, when I log in with admin creditials, you can see all the users created within the website. 
 

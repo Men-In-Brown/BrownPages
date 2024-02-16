@@ -5,6 +5,7 @@ layout: post
 title: N@TM Checkpoint
 description: Reflections on our part in Night At The Museum, other people's CSA projects, and other classes' projects during the showcase.
 type: tangibles
+permalink: /natm-retro
 ---
 
 # Two Trimester Focus Planning

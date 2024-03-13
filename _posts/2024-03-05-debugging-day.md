@@ -5,6 +5,7 @@ layout: post
 title: Debugging Event
 description: Using debugging tools in LocalHost to demonstrate knowledge on common API errors
 type: tangibles
+categories: devlog
 permalink: /debugging-event
 ---
 

@@ -5,6 +5,7 @@ layout: post
 title: Notes for our Tri 3 Lesson
 description: 
 type: tangibles
+categories: devlog
 ---
 
 - next Wednesday

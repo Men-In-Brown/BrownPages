@@ -261,22 +261,30 @@ When operating with CORS on the backend, you need to create specific blocking sy
 Example Nginx
 ```
 server {
-    listen 80;
-    listen [::]:80;
-    server_name spring.nighthawkcodingsociety.com;
+    server_name schaal.stu.nighthawkcodingsociety.com ; # Change server name to the one on R53
+    # Configure CORS Headers
     location / {
-        proxy_pass http://localhost:8085;
-        # Preflighted requests
+        proxy_pass http://localhost:8091; # Change port to port on docker
+        # Simple requests
+        if ($request_method ~* "(GET|POST|PUT|DELETE)") { # Customize Request methods based on your needs
+        }
+        # Preflighted requests 
         if ($request_method = OPTIONS ) {
-            add_header "Access-Control-Allow-Credentials" "true" always;
-            add_header "Access-Control-Allow-Origin"  "https://nighthawkcoders.github.io" always; 
-            add_header "Access-Control-Allow-Methods" "GET, POST, PUT, OPTIONS, HEAD" always;
-            add_header "Access-Control-Allow-MaxAge" 600 always;
-            add_header "Access-Control-Allow-Headers" "Authorization, Origin, X-Origin, X-Requested-With, Content-Type, Accept" always;
-            return 204;
+                add_header "Access-Control-Allow-Credentials" "true";
+                add_header "Access-Control-Allow-Origin"  "https://men-in-brown.github.io";
+                add_header "Access-Control-Allow-Methods" "GET, POST, PUT, DELETE, OPTIONS, HEAD"; # Make sure the request >
+                add_header "Access-Control-Allow-Headers" "Authorization, Origin, X-Requested-With, Content-Type, Accept";
+                return 200;
         }
     }
 }
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/schaal.stu.nighthawkcodingsociety.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/schaal.stu.nighthawkcodingsociety.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 ```
 
 This above nginx code configures the **proxy pass**, or the port where all your code is actually hosted, which is then mapped onto the DNS you created. The biggest thing to understand is the add headers. They are

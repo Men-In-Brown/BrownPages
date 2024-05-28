@@ -285,6 +285,13 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/schaal.stu.nighthawkcodingsociety.com/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/schaal.stu.nighthawkcodingsociety.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/schaal.stu.nighthawkcodingsociety.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 ```
 
 This above nginx code configures the **proxy pass**, or the port where all your code is actually hosted, which is then mapped onto the DNS you created. The biggest thing to understand is the add headers. They are
